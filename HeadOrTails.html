@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head or Tails</title>
+    <style>
+        p {
+            font-size: 200%;
+            font-family: sans-serif;
+        }
+
+        button {
+            background-color: #ff8000;
+            color: black;
+            border: none;
+            width: 110px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10%;
+        }
+
+        button:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        .nextProblemSolution {
+            background-color: green;
+            color: white;
+            border: none;
+            width: 110px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+            align-items: baseline;
+        }
+
+        .nextProblemSolution:hover {
+            color: black;
+        }
+
+        div{
+            font-size: 250%;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <p>
+            Head or Tails
+            Try To Guess Correctly!
+        </p>
+        <button onclick="
+    const randomNumber = Math.random();
+    let computerMove = '';
+    if (randomNumber >= 0 && randomNumber < 0.5){
+        computerMove = 'Head';
+    } else if (randomNumber >= 0.5 && randomNumber < 1){
+        computerMove = 'Tails';
+    }
+    console.log(computerMove);
+    let result = '';
+    if (computerMove === 'Head'){
+        result = 'You win';
+    } else if (computerMove === 'Tails'){
+        result = 'You lose';
+    }
+    //alert(`Computer picked ${computerMove}. `);
+    document.getElementById('result').innerHTML = `Computer picked ${computerMove}. ${result}`
+    ">
+            Head
+        </button>
+        <button onclick="
+    const randomNumber = Math.random();
+    let computerMove = '';
+    if (randomNumber >= 0 && randomNumber < 0.5){
+        computerMove = 'Head';
+    } else if (randomNumber >= 0.5 && randomNumber < 1){
+        computerMove = 'Tails';
+    }
+    console.log(computerMove);
+    let result = '';
+    if (computerMove === 'Tails'){
+        result = 'You win';
+    } else if (computerMove === 'Head'){
+        result = 'You lose';
+    }
+    //alert(`Computer picked ${computerMove}. `);
+    document.getElementById('result').innerHTML = `Computer picked ${computerMove}. ${result}`
+">
+            Tails
+        </button>
+        <div id="result">
+
+        </div>
+
+        <a class="nextProblemSolution" href="">Next Solution</a>
+    </center>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
