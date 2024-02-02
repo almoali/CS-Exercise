@@ -31,6 +31,24 @@
             color: white;
             cursor: pointer;
         }
+
+        .nextProblemSolution {
+            background-color: green;
+            color: white;
+            border: none;
+            width: 110px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+           align-items: baseline;
+        }
+        .nextProblemSolution:hover{
+            color: black;
+        }
     </style>
 </head>
 
@@ -88,7 +106,7 @@
     }
     alert(`you picked Paper computer picked ${computerMove}.  ${result}.`);
     ">Paper</button>
-    
+
         <button onclick="
      const randomNumber = Math.random();
      let computerMove = '';
@@ -109,7 +127,9 @@
          result = 'tie'
      }
      alert(`you picked Scissors computer picked ${computerMove}.  ${result}.`);
-     ">Scissors</button>
+     ">Scissors</button><br>
+
+        <a class="nextProblemSolution" href="">Next Solution</a>
 </body>
 </center>
 
