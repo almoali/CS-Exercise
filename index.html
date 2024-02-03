@@ -44,11 +44,17 @@
             margin: 10px;
             text-decoration: none;
             display: inline-block;
-           align-items: baseline;
+            align-items: baseline;
         }
-        .nextProblemSolution:hover{
+
+        .nextProblemSolution:hover {
             color: black;
         }
+        div{
+            font-size: 250%;
+            font-family: sans-serif;
+        }
+
     </style>
 </head>
 
@@ -75,13 +81,14 @@
     } else if (computerMove === 'Scissors'){
         result = 'you win'
     }
-    alert(`you picked rock computer picked ${computerMove}.  ${result}.`);
+    //alert(`you picked rock computer picked ${computerMove}.  ${result}.`);
+    document.getElementById('result').innerHTML = `You picked Rock computer picked ${computerMove}.  ${result}.`
     ">
-
             Rock
-
         </button>
+        <div id="result">
 
+        </div>
 
 
 
@@ -104,9 +111,12 @@
     } else if (computerMove === 'Scissors'){
         result = 'you lose'
     }
-    alert(`you picked Paper computer picked ${computerMove}.  ${result}.`);
+    //alert(`you picked Paper computer picked ${computerMove}.  ${result}.`);
+    document.getElementById('result2').innerHTML = `You picked Paper computer picked ${computerMove}.  ${result}.`
     ">Paper</button>
+ <div id="result2">
 
+ </div>
         <button onclick="
      const randomNumber = Math.random();
      let computerMove = '';
@@ -126,9 +136,13 @@
      } else if (computerMove === 'Scissors'){
          result = 'tie'
      }
-     alert(`you picked Scissors computer picked ${computerMove}.  ${result}.`);
+     //alert(`you picked Scissors computer picked ${computerMove}.  ${result}.`);
+     document.getElementById('result3').innerHTML = `You picked Scissors computer picked ${computerMove}.  ${result}.`
      ">Scissors</button><br>
 
+        <div id="result3">
+
+        </div>
         <a class="nextProblemSolution" href="./HeadOrTails.html">Next Solution</a>
 </body>
 </center>
