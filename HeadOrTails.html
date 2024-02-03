@@ -63,46 +63,10 @@
             Head or Tails
             Try To Guess Correctly!
         </p>
-        <button onclick="
-    const randomNumber = Math.random();
-    let computerMove = '';
-    if (randomNumber >= 0 && randomNumber < 0.5){
-        computerMove = 'Head';
-    } else if (randomNumber >= 0.5 && randomNumber < 1){
-        computerMove = 'Tails';
-    }
-    console.log(computerMove);
-    let result = '';
-    if (computerMove === 'Head'){
-        result = 'You win';
-    } else if (computerMove === 'Tails'){
-        result = 'You lose';
-    }
-    //alert(`Computer picked ${computerMove}. `);
-    document.getElementById('result').innerHTML = `Computer picked ${computerMove}. ${result}`
-    ">
-            Head
-        </button>
-        <button onclick="
-    const randomNumber = Math.random();
-    let computerMove = '';
-    if (randomNumber >= 0 && randomNumber < 0.5){
-        computerMove = 'Head';
-    } else if (randomNumber >= 0.5 && randomNumber < 1){
-        computerMove = 'Tails';
-    }
-    console.log(computerMove);
-    let result = '';
-    if (computerMove === 'Tails'){
-        result = 'You win';
-    } else if (computerMove === 'Head'){
-        result = 'You lose';
-    }
-    //alert(`Computer picked ${computerMove}. `);
-    document.getElementById('result').innerHTML = `Computer picked ${computerMove}. ${result}`
-">
-            Tails
-        </button>
+        <button onclick="pickHeadOrTails()">Head</button>
+    
+        <button onclick="pickHeadOrTails2()">Tails</button>
+    
         <div id="result">
 
         </div>
@@ -110,9 +74,7 @@
         <a class="nextProblemSolution" href="./bloxroll.html">Next Solution</a>
     </center>
 
-    <script>
-
-    </script>
+<script src="./HeadOrTails.js"></script>
 </body>
 
 </html>
