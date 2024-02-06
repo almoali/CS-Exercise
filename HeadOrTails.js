@@ -1,4 +1,5 @@
 let computerMove = '';
+
 function pickHeadOrTails() {
     const randomNumber = Math.random();
     if (randomNumber >= 0 && randomNumber < 0.5) {
@@ -33,4 +34,21 @@ function pickHeadOrTails2() {
     }
     //alert(`Computer picked ${computerMove}. `);
     document.getElementById('result').innerHTML = `Computer picked ${computerMove}. ${result}`
+}
+function letComputerGuess() {
+    const randomNumber = Math.random();
+    if (randomNumber >= 0 && randomNumber < 0.5){
+        computerMove = 'Head';
+    } else if(randomNumber >= 0.5 && randomNumber < 1){
+        computerMove = 'Tails';
+    }
+    console.log(computerMove);
+    let result = '';
+    if (computerMove === 'Tails') {
+        result = 'Computer Picked Tails';
+    } else if (computerMove === 'Head') {
+        result = 'Computer Picked Head';
+    }
+    //alert(`Computer picked ${computerMove}. `);
+    document.getElementById('guess').innerHTML = `${result}`
 }
